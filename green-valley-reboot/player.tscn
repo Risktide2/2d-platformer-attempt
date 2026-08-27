@@ -1,0 +1,39 @@
+[gd_scene format=3 uid="uid://cem8d6i0bn60s"]
+
+[ext_resource type="ArrayMesh" uid="uid://dafwxbslbed1q" path="res://Tangle.obj" id="1_4flbx"]
+[ext_resource type="Material" uid="uid://dqim046y3sone" path="res://Player body texture.tres" id="2_onrkg"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_onrkg"]
+
+[node name="Player" type="CharacterBody3D" unique_id=770292430]
+transform = Transform3D(0.8, 0, 0, 0, 0.8, 0, 0, 0, 0.8, 0, 0, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=563820994]
+transform = Transform3D(0.8, 0, 0, 0, 0.8, 0, 0, 0, 0.8, 0, 0, 0)
+shape = SubResource("CapsuleShape3D_onrkg")
+
+[node name="Tangle" type="MeshInstance3D" parent="." unique_id=757043668]
+transform = Transform3D(0.8000001, 0, 0, 0, 0.8000001, 0, 0, 0, 0.8000001, 0, -0.76900065, 0)
+mesh = ExtResource("1_4flbx")
+surface_material_override/0 = ExtResource("2_onrkg")
+surface_material_override/1 = ExtResource("2_onrkg")
+surface_material_override/2 = ExtResource("2_onrkg")
+surface_material_override/3 = ExtResource("2_onrkg")
+surface_material_override/4 = ExtResource("2_onrkg")
+surface_material_override/5 = ExtResource("2_onrkg")
+surface_material_override/6 = ExtResource("2_onrkg")
+surface_material_override/7 = ExtResource("2_onrkg")
+surface_material_override/8 = ExtResource("2_onrkg")
+surface_material_override/9 = ExtResource("2_onrkg")
+surface_material_override/10 = ExtResource("2_onrkg")
+surface_material_override/11 = ExtResource("2_onrkg")
+surface_material_override/12 = ExtResource("2_onrkg")
+surface_material_override/13 = ExtResource("2_onrkg")
+surface_material_override/14 = ExtResource("2_onrkg")
+surface_material_override/15 = ExtResource("2_onrkg")
+surface_material_override/16 = ExtResource("2_onrkg")
+surface_material_override/17 = ExtResource("2_onrkg")
+
+[node name="Camera3D" type="Camera3D" parent="." unique_id=2145102545]
+transform = Transform3D(-0.8, 1.7654058e-08, -1.1095607e-07, -2.764917e-08, 0.7348289, 0.31626973, 1.08896465e-07, 0.31626973, -0.7348289, 0, 1.1840123, -0.8975605)
+fov = 77.80491
