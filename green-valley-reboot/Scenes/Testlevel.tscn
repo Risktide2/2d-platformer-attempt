@@ -1,11 +1,11 @@
 [gd_scene format=4 uid="uid://blhnhtta8jvr0"]
 
-[ext_resource type="ArrayMesh" uid="uid://bujjtgn5ommq1" path="res://crates.obj" id="1_rilvn"]
-[ext_resource type="ArrayMesh" uid="uid://bkk77r55rwov8" path="res://crates2.obj" id="2_btw46"]
-[ext_resource type="ArrayMesh" uid="uid://ca4m7h5y3x2ck" path="res://crates1.obj" id="3_k1lkf"]
-[ext_resource type="PackedScene" uid="uid://cem8d6i0bn60s" path="res://player.tscn" id="4_rilvn"]
-[ext_resource type="Material" uid="uid://chr7iw2bwuadn" path="res://Grass green.tres" id="5_btw46"]
-[ext_resource type="PackedScene" uid="uid://b7w6p4563604" path="res://Grass.glb" id="6_k1lkf"]
+[ext_resource type="PackedScene" uid="uid://cem8d6i0bn60s" path="res://Prefabs/player.tscn" id="1_i4bxf"]
+[ext_resource type="Material" uid="uid://chr7iw2bwuadn" path="res://materials/Grass green.tres" id="2_ilr6r"]
+[ext_resource type="PackedScene" uid="uid://b7w6p4563604" path="res://models/Grass.glb" id="3_rt1uc"]
+[ext_resource type="ArrayMesh" uid="uid://bujjtgn5ommq1" path="res://models/crates.obj" id="4_3ax63"]
+[ext_resource type="ArrayMesh" uid="uid://bkk77r55rwov8" path="res://models/crates2.obj" id="5_xkqjq"]
+[ext_resource type="ArrayMesh" uid="uid://ca4m7h5y3x2ck" path="res://models/crates1.obj" id="6_hff3c"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_v1t32"]
 sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
@@ -21,7 +21,7 @@ tonemap_mode = 2
 glow_enabled = true
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_k1lkf"]
-material = ExtResource("5_btw46")
+material = ExtResource("2_ilr6r")
 size = Vector2(100, 100)
 
 [sub_resource type="WorldBoundaryShape3D" id="WorldBoundaryShape3D_jl21i"]
@@ -91,7 +91,7 @@ environment = SubResource("Environment_r1n40")
 transform = Transform3D(-0.8660254, -0.43301278, 0.25, 0, 0.49999997, 0.86602545, -0.50000006, 0.75, -0.43301266, 0, 0, 0)
 shadow_enabled = true
 
-[node name="Player" parent="." unique_id=770292430 instance=ExtResource("4_rilvn")]
+[node name="Player" parent="." unique_id=770292430 instance=ExtResource("1_i4bxf")]
 transform = Transform3D(-0.97241473, 0, 0.23325874, 0, 1, 0, -0.23325874, 0, -0.97241473, 0.0009908676, 0.80837584, 0.009524107)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="." unique_id=1440940569]
@@ -107,7 +107,7 @@ shape = SubResource("WorldBoundaryShape3D_jl21i")
 [node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=92687583]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.80396485, 0.2510401, -0.28010273)
 
-[node name="Grass" parent="." unique_id=1764958402 instance=ExtResource("6_k1lkf")]
+[node name="Grass" parent="." unique_id=1764958402 instance=ExtResource("3_rt1uc")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.17990625, 0)
 visible = false
 
@@ -120,7 +120,7 @@ multimesh = SubResource("MultiMesh_k1lkf")
 
 [node name="Crates" type="MeshInstance3D" parent="StaticBody3D2" unique_id=888439791]
 transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 1.7929616, 0.4752457, -2.7074177)
-mesh = ExtResource("1_rilvn")
+mesh = ExtResource("4_3ax63")
 surface_material_override/0 = SubResource("StandardMaterial3D_rilvn")
 
 [node name="CollisionShape3D3" type="CollisionShape3D" parent="StaticBody3D2" unique_id=805479723]
@@ -133,11 +133,11 @@ shape = SubResource("ConcavePolygonShape3D_v1t32")
 
 [node name="Crates2" type="MeshInstance3D" parent="StaticBody3D2" unique_id=2015458334]
 transform = Transform3D(0.11100672, 0, 0.27870685, 0, 0.29999998, 0, -0.27870685, 0, 0.11100672, -3.7927926, 0.4962257, -2.9848115)
-mesh = ExtResource("2_btw46")
+mesh = ExtResource("5_xkqjq")
 
 [node name="Crates1" type="MeshInstance3D" parent="StaticBody3D2" unique_id=1774063901]
 transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, -2.7776182, 0.5036063, 3.378896)
-mesh = ExtResource("3_k1lkf")
+mesh = ExtResource("6_hff3c")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D2" unique_id=492448199]
 transform = Transform3D(0.29999998, 0, 0, 0, 0.29999998, 0, 0, 0, 0.29999998, 1.7929616, 0.4752457, -2.7074177)

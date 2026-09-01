@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://b7w6p4563604"
-path="res://.godot/imported/Grass.glb-83280cb173e1e893d367d7565542a994.scn"
+uid="uid://c2demxjnw1r2n"
+path="res://.godot/imported/Door.glb-4f46f0a63bfa9bc01082833c80846771.scn"
 
 [deps]
 
-source_file="res://Grass.glb"
-dest_files=["res://.godot/imported/Grass.glb-83280cb173e1e893d367d7565542a994.scn"]
+source_file="res://models/Door.glb"
+dest_files=["res://.godot/imported/Door.glb-4f46f0a63bfa9bc01082833c80846771.scn"]
 
 [params]
 

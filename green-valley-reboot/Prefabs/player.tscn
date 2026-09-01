@@ -1,8 +1,8 @@
 [gd_scene format=3 uid="uid://cem8d6i0bn60s"]
 
-[ext_resource type="ArrayMesh" uid="uid://dafwxbslbed1q" path="res://Tangle.obj" id="1_4flbx"]
-[ext_resource type="Script" uid="uid://dbbtyrgcgk2tm" path="res://player.gd" id="1_i3pqv"]
-[ext_resource type="Material" uid="uid://dqim046y3sone" path="res://Player body texture.tres" id="2_onrkg"]
+[ext_resource type="ArrayMesh" uid="uid://dafwxbslbed1q" path="res://models/Tangle.obj" id="1_4flbx"]
+[ext_resource type="Script" uid="uid://dbbtyrgcgk2tm" path="res://scripts/player.gd" id="1_i3pqv"]
+[ext_resource type="Material" uid="uid://dqim046y3sone" path="res://materials/Player body texture.tres" id="2_onrkg"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_onrkg"]
 
