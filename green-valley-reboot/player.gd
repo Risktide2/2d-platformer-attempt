@@ -3,6 +3,7 @@ extends CharacterBody3D
 
 const SPEED = 5.0
 const JUMP_VELOCITY = 4.5
+const SPRINT_VELOCITY = 2
 
 @onready var pivot: Node3D = $CameraOrigin
 @export var sens = 0.5
@@ -31,6 +32,10 @@ func _physics_process(delta: float) -> void:
 	if direction:
 		velocity.x = direction.x * SPEED
 		velocity.z = direction.z * SPEED
+		#check if sprinting
+		if Input.is_action_pressed("sprint"):
+			#we are sprinting
+			velocity.z *= SPRINT_VELOCITY
 	else:
 		velocity.x = move_toward(velocity.x, 0, SPEED)
 		velocity.z = move_toward(velocity.z, 0, SPEED)
