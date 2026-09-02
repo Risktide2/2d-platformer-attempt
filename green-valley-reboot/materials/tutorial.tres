@@ -1,0 +1,20 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://ttco35v2l7c0"]
+
+[ext_resource type="Texture2D" uid="uid://oci2tpws0opn" path="res://textures/Untitled231_20260902193235.png" id="1_tpkrv"]
+
+[resource]
+diffuse_mode = 3
+specular_mode = 1
+albedo_texture = ExtResource("1_tpkrv")
+metallic = 1.0
+metallic_texture = ExtResource("1_tpkrv")
+metallic_texture_channel = 4
+roughness_texture_channel = 4
+normal_scale = 16.0
+heightmap_scale = 14.296
+heightmap_texture = ExtResource("1_tpkrv")
+refraction_enabled = true
+uv1_scale = Vector3(0.295, 0.295, 0.295)
+uv1_triplanar = true
+uv1_triplanar_sharpness = 3.3635914
+uv1_world_triplanar = true
