@@ -3,6 +3,8 @@
 [ext_resource type="ArrayMesh" uid="uid://dafwxbslbed1q" path="res://models/Tangle.obj" id="1_4flbx"]
 [ext_resource type="Script" uid="uid://dbbtyrgcgk2tm" path="res://scripts/player.gd" id="1_i3pqv"]
 [ext_resource type="Material" uid="uid://dqim046y3sone" path="res://materials/Player body texture.tres" id="2_onrkg"]
+[ext_resource type="PackedScene" uid="uid://c1qexqvwxxayw" path="res://materials/Dot_pickup.tscn" id="4_knrd4"]
+[ext_resource type="PackedScene" uid="uid://2o7chtlsvl6b" path="res://Prefabs/ui.tscn" id="5_hck1p"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_onrkg"]
 
@@ -53,3 +55,7 @@ margin = 0.5
 [node name="Camera3D" type="Camera3D" parent="CameraOrigin/SpringArm3D" unique_id=1974284037]
 transform = Transform3D(1.25, 0, 0, 0, 1.25, 0, 0, 0, 1.25, 0, 0.35346177, 1.7893606)
 fov = 57.674572
+
+[node name="InteractRay" parent="CameraOrigin" unique_id=619385121 instance=ExtResource("4_knrd4")]
+
+[node name="UI" parent="." unique_id=1758347381 instance=ExtResource("5_hck1p")]

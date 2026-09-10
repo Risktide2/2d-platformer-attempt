@@ -1,0 +1,25 @@
+[gd_scene format=3 uid="uid://2o7chtlsvl6b"]
+
+[ext_resource type="Texture2D" uid="uid://rgwb7pvuir4b" path="res://textures/Untitled232_20260903103222.png" id="1_ajyd5"]
+
+[node name="UI" type="Control" unique_id=1758347381]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Crosshair" type="TextureRect" parent="." unique_id=1281631506]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.18672031, 0.18672031)
+texture = ExtResource("1_ajyd5")
+expand_mode = 5
+stretch_mode = 3
