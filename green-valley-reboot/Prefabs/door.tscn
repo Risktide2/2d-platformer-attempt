@@ -1,0 +1,118 @@
+[gd_scene format=3 uid="uid://cf74da057dihj"]
+
+[ext_resource type="Script" uid="uid://dgd6sj11tvgqu" path="res://Prefabs/door.gd" id="1_bp8im"]
+[ext_resource type="PackedScene" uid="uid://c2demxjnw1r2n" path="res://models/Door.glb" id="1_uqoeb"]
+[ext_resource type="AudioStream" uid="uid://oxs4j76tpfni" path="res://sounds/freesound_community-sliding_door_opening_1-2-89918.mp3" id="3_0i76c"]
+
+[sub_resource type="Animation" id="Animation_bp8im"]
+resource_name = "Door Open"
+length = 1.4333333
+markers = [{
+"color": Color(1, 1, 1, 1),
+"name": &"door closed",
+"time": 0.0
+}]
+tracks/0/type = "position_3d"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Cube")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = PackedFloat32Array(0, 1, 0, 0, 0)
+tracks/1/type = "position_3d"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Cube_001")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = PackedFloat32Array(0, 1, 0, 0, -17.669996, 1.3666667, 1, 0, 0, -45.92615)
+tracks/2/type = "position_3d"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Cube_002")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = PackedFloat32Array(0, 1, 0, 0, 17.750511, 1.3666667, 1, 0, 0, 42.12289)
+
+[sub_resource type="Animation" id="Animation_0i76c"]
+length = 0.001
+tracks/0/type = "position_3d"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Cube_001")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = PackedFloat32Array(0, 1, 0, 0, -17.669996)
+tracks/1/type = "position_3d"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Cube")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = PackedFloat32Array(0, 1, 0, 0, 0)
+tracks/2/type = "position_3d"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Cube_002")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = PackedFloat32Array(0, 1, 0, 0, 0)
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_kvppq"]
+_data = {
+&"Door Open": SubResource("Animation_bp8im"),
+&"RESET": SubResource("Animation_0i76c")
+}
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_uqoeb"]
+animation = &"Door Open"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_bp8im"]
+animation = &"Door Open"
+play_mode = 1
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_0i76c"]
+advance_mode = 2
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_kvppq"]
+switch_mode = 2
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_wsr4k"]
+switch_mode = 2
+
+[sub_resource type="AnimationNodeStateMachine" id="AnimationNodeStateMachine_nbvux"]
+"states/Door Open/node" = SubResource("AnimationNodeAnimation_uqoeb")
+"states/Door Open/position" = Vector2(585, 80)
+"states/Door close/node" = SubResource("AnimationNodeAnimation_bp8im")
+"states/Door close/position" = Vector2(585, 168)
+states/Start/position = Vector2(346, 72)
+transitions = ["Start", "Door close", SubResource("AnimationNodeStateMachineTransition_0i76c"), "Door close", "Door Open", SubResource("AnimationNodeStateMachineTransition_kvppq"), "Door Open", "Door close", SubResource("AnimationNodeStateMachineTransition_wsr4k")]
+graph_offset = Vector2(2, -15)
+
+[node name="door" type="Node3D" unique_id=1193059707]
+transform = Transform3D(0.16, 0, 0, 0, 0.16, 0, 0, 0, 0.16, 0, 0, 0)
+script = ExtResource("1_bp8im")
+
+[node name="Door" parent="." unique_id=687196778 instance=ExtResource("1_uqoeb")]
+transform = Transform3D(0.18, 0, 0, 0, 0.18, 0, 0, 0, 0.18, 0, 0, 0)
+
+[node name="Cube_001" parent="Door" index="1" unique_id=2032311651]
+transform = Transform3D(1, 0, 0, 0, 28.247543, 0, 0, 0, 20.11233, 0, 0, -17.669996)
+
+[node name="Cube_002" parent="Door" index="2" unique_id=2780328]
+transform = Transform3D(1, 0, 0, 0, -28.247543, 5.4045386e-06, 0, -7.5906146e-06, -20.11233, 0, 0, 0)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1386981247]
+root_node = NodePath("../Door")
+libraries/ = SubResource("AnimationLibrary_kvppq")
+
+[node name="AnimationTree" type="AnimationTree" parent="." unique_id=1101569239]
+root_node = NodePath("../Door")
+tree_root = SubResource("AnimationNodeStateMachine_nbvux")
+anim_player = NodePath("../AnimationPlayer")
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="." unique_id=144256869]
+stream = ExtResource("3_0i76c")
+volume_db = 34.393
+
+[editable path="Door"]
