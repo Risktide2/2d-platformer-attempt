@@ -104,9 +104,6 @@ mesh = SubResource("PlaneMesh_k1lkf")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.05233693, 0)
 shape = SubResource("WorldBoundaryShape3D_jl21i")
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=92687583]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.80396485, 0.2510401, -0.28010273)
-
 [node name="Grass" parent="." unique_id=1764958402 instance=ExtResource("3_rt1uc")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.17990625, 0)
 visible = false
