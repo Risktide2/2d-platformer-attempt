@@ -1,0 +1,24 @@
+[gd_scene format=3 uid="uid://drt8i1hn7ycs5"]
+
+[ext_resource type="Script" uid="uid://ci20ubac8ym14" path="res://interactible.gd" id="1_u8i8l"]
+[ext_resource type="ArrayMesh" uid="uid://b64q6h1tl4jks" path="res://models/Lock.obj" id="2_yl3d1"]
+[ext_resource type="Texture2D" uid="uid://bs853exvx10xe" path="res://textures/Untitled230_20260901142208.png" id="3_70snn"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_pqt4o"]
+albedo_texture = ExtResource("3_70snn")
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_pqt4o"]
+size = Vector3(0.16, 0.215, 0.06)
+
+[node name="Tutorial door lockj" type="Node3D" unique_id=805337884]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="." unique_id=1321882966]
+script = ExtResource("1_u8i8l")
+
+[node name="Lock" type="MeshInstance3D" parent="StaticBody3D" unique_id=1613596482]
+transform = Transform3D(0.475, 0, 0, 0, 0.475, 0, 0, 0, 0.475, 0, 0, 0)
+mesh = ExtResource("2_yl3d1")
+surface_material_override/0 = SubResource("StandardMaterial3D_pqt4o")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" unique_id=1740358624]
+shape = SubResource("BoxShape3D_pqt4o")

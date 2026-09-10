@@ -6,4 +6,11 @@ func _physics_process(_delta):
 	prompt.text = ""
 	
 	if is_colliding():
-		prompt.text = "something else..."
+		var collider = get_collider()
+		
+		
+		if collider is Interactible:
+			prompt.text = collider.prompt_message
+			
+			if Input.is_action_just_pressed("interact"):
+				collider.interact(owner)

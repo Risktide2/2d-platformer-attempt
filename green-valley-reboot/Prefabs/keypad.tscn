@@ -1,0 +1,26 @@
+[gd_scene format=3 uid="uid://cdgf2klh7aux8"]
+
+[ext_resource type="Script" uid="uid://ci20ubac8ym14" path="res://interactible.gd" id="1_qbewg"]
+[ext_resource type="ArrayMesh" uid="uid://b64q6h1tl4jks" path="res://models/Lock.obj" id="2_6tvp5"]
+[ext_resource type="Texture2D" uid="uid://bs853exvx10xe" path="res://textures/Untitled230_20260901142208.png" id="3_u3qng"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_pqt4o"]
+albedo_texture = ExtResource("3_u3qng")
+emission_enabled = true
+emission = Color(1, 1, 1, 1)
+emission_energy_multiplier = 3.46
+emission_operator = 1
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_pqt4o"]
+size = Vector3(0.30297852, 0.41967773, 0.14440918)
+
+[node name="Keypad" type="StaticBody3D" unique_id=650272725]
+script = ExtResource("1_qbewg")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=1000077262]
+mesh = ExtResource("2_6tvp5")
+surface_material_override/0 = SubResource("StandardMaterial3D_pqt4o")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1242514902]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00036621094, -0.006225586, -0.004333496)
+shape = SubResource("BoxShape3D_pqt4o")

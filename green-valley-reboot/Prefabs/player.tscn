@@ -21,6 +21,7 @@ shape = SubResource("CapsuleShape3D_onrkg")
 
 [node name="Tangle" type="MeshInstance3D" parent="." unique_id=757043668]
 transform = Transform3D(-0.8000001, 0, -6.9938224e-08, 0, 0.8000001, 0, 6.9938224e-08, 0, -0.8000001, 0, -0.76900065, 0)
+visible = false
 mesh = ExtResource("1_4flbx")
 surface_material_override/0 = ExtResource("2_onrkg")
 surface_material_override/1 = ExtResource("2_onrkg")
@@ -42,7 +43,6 @@ surface_material_override/16 = ExtResource("2_onrkg")
 surface_material_override/17 = ExtResource("2_onrkg")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=1544925546]
-visible = false
 mesh = SubResource("CapsuleMesh_hqtel")
 
 [node name="CameraOrigin" type="Node3D" parent="." unique_id=1704211897]
@@ -52,10 +52,10 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.4379891, 0)
 spring_length = 2.0
 margin = 0.5
 
-[node name="Camera3D" type="Camera3D" parent="CameraOrigin/SpringArm3D" unique_id=1974284037]
-transform = Transform3D(1.25, 0, 0, 0, 1.25, 0, 0, 0, 1.25, 0, 0.35346177, 1.7893606)
-fov = 57.674572
-
 [node name="InteractRay" parent="CameraOrigin" unique_id=619385121 instance=ExtResource("4_knrd4")]
+
+[node name="Camera3D" type="Camera3D" parent="CameraOrigin" unique_id=1974284037]
+transform = Transform3D(1.25, 0, 0, 0, 1.25, 0, 0, 0, 1.25, 0, 0.13052908, -0.10305744)
+fov = 57.674572
 
 [node name="UI" parent="." unique_id=1758347381 instance=ExtResource("5_hck1p")]
