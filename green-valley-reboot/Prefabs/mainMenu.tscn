@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://psqtr6nbhotw"]
 
 [ext_resource type="Script" uid="uid://bdlrgnagffiik" path="res://MainMenu.gd" id="1_sravh"]
+[ext_resource type="Texture2D" uid="uid://hdm27bdjcp2q" path="res://textures/Untitled244_20260911141655.png" id="2_gck0r"]
 
 [node name="Control" type="Control" unique_id=913124123]
 layout_mode = 3
@@ -12,15 +13,45 @@ grow_vertical = 2
 script = ExtResource("1_sravh")
 metadata/_edit_use_anchors_ = true
 
-[node name="ColorRect" type="ColorRect" parent="." unique_id=1274362026]
+[node name="ColorRect" type="ColorRect" parent="." unique_id=2079341757]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-color = Color(0.61339027, 0.61339027, 0.61339027, 1)
-metadata/_edit_use_anchors_ = true
+color = Color(0.09524172, 0.21545175, 0, 1)
+
+[node name="TextEdit" type="TextEdit" parent="." unique_id=1323006673]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -60.0
+offset_top = 80.0
+offset_right = 60.0
+offset_bottom = 142.0
+grow_horizontal = 2
+text = "Green Valley
+Trial of Time"
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=596614200]
+visible = false
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -1152.0
+offset_top = -648.0
+offset_right = 1920.0
+offset_bottom = 1656.0
+grow_horizontal = 0
+grow_vertical = 0
+scale = Vector2(0.375, 0.375)
+texture = ExtResource("2_gck0r")
+stretch_mode = 3
 
 [node name="CenterContainer" type="CenterContainer" parent="." unique_id=1538505130]
 layout_mode = 1
@@ -33,14 +64,65 @@ grow_vertical = 2
 [node name="VBoxContainer" type="VBoxContainer" parent="CenterContainer" unique_id=87416335]
 layout_mode = 2
 
-[node name="Button" type="Button" parent="CenterContainer/VBoxContainer" unique_id=1751633502]
+[node name="Play" type="Button" parent="CenterContainer/VBoxContainer" unique_id=1751633502]
+unique_name_in_owner = true
 layout_mode = 2
 text = "Play"
 
-[node name="Button2" type="Button" parent="CenterContainer/VBoxContainer" unique_id=1113841616]
+[node name="Settings" type="Button" parent="CenterContainer/VBoxContainer" unique_id=1113841616]
+unique_name_in_owner = true
 layout_mode = 2
 text = "Settings"
 
-[node name="Button3" type="Button" parent="CenterContainer/VBoxContainer" unique_id=1108806282]
+[node name="Quit" type="Button" parent="CenterContainer/VBoxContainer" unique_id=1108806282]
+unique_name_in_owner = true
 layout_mode = 2
 text = "Exit"
+
+[node name="Settings panel" type="Panel" parent="." unique_id=294065550]
+visible = false
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.42100695
+anchor_top = 0.34104937
+anchor_right = 0.5815972
+anchor_bottom = 0.6527778
+offset_left = -3.0
+offset_top = 3.0
+offset_bottom = 3.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Settings panel" unique_id=1465941016]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="TextEdit" type="TextEdit" parent="Settings panel" unique_id=1173858025]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -56.0
+offset_right = 56.0
+offset_bottom = 32.0
+grow_horizontal = 2
+size_flags_vertical = 0
+text = "Settings"
+
+[node name="Button" type="Button" parent="Settings panel" unique_id=603769877]
+layout_mode = 0
+offset_left = 4.0
+offset_top = 3.0
+offset_right = 34.0
+offset_bottom = 34.0
+text = "X"
+
+[connection signal="pressed" from="CenterContainer/VBoxContainer/Settings" to="Settings panel" method="show"]
+[connection signal="pressed" from="CenterContainer/VBoxContainer/Settings" to="Settings panel" method="set_mouse_filter" binds= [0]]
+[connection signal="pressed" from="Settings panel/Button" to="Settings panel" method="hide"]

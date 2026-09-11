@@ -1,0 +1,25 @@
+[gd_scene format=3 uid="uid://bbmqqayugwy7i"]
+
+[ext_resource type="Texture2D" uid="uid://cbuxn62pd2fbq" path="res://textures/Untitled245_20260911172246.png" id="1_r7fun"]
+[ext_resource type="Texture2D" uid="uid://hbv2qjfnf5r4" path="res://textures/Untitled245_20260911172255.png" id="2_7bkq7"]
+
+[node name="Control" type="Control" unique_id=621261581]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="." unique_id=118937312]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Untitled24520260911172246" type="Sprite2D" parent="HBoxContainer" unique_id=417510888]
+position = Vector2(-3, 23)
+texture = ExtResource("1_r7fun")
+
+[node name="Untitled24520260911172255" type="Sprite2D" parent="HBoxContainer" unique_id=399147249]
+position = Vector2(-8, 21)
+texture = ExtResource("2_7bkq7")
