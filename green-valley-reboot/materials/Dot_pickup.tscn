@@ -4,6 +4,7 @@
 
 [node name="InteractRay" type="RayCast3D" unique_id=619385121]
 target_position = Vector3(0, 0, -4)
+collide_with_areas = true
 script = ExtResource("1_sejgf")
 
 [node name="prompt" type="Label" parent="." unique_id=748420501]
@@ -11,8 +12,8 @@ anchors_preset = 14
 anchor_top = 0.5
 anchor_right = 1.0
 anchor_bottom = 0.5
-offset_top = 140.84
-offset_bottom = 233.84003
+offset_top = 30.839996
+offset_bottom = 123.84003
 grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 4

@@ -11,8 +11,13 @@ config_version=5
 [application]
 
 config/name="Green valley reboot"
+run/main_scene="uid://psqtr6nbhotw"
 config/features=PackedStringArray("4.7", "Forward Plus")
 config/icon="res://icon.svg"
+
+[autoload]
+
+GameState="*uid://bgoy7pbcm4ne3"
 
 [dotnet]
 
@@ -68,6 +73,7 @@ interact={
 
 [physics]
 
+common/physics_ticks_per_second=180
 3d/physics_engine="Jolt Physics"
 
 [rendering]

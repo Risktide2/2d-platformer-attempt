@@ -3,6 +3,44 @@
 [ext_resource type="Texture2D" uid="uid://cbuxn62pd2fbq" path="res://textures/Untitled245_20260911172246.png" id="1_r7fun"]
 [ext_resource type="Texture2D" uid="uid://hbv2qjfnf5r4" path="res://textures/Untitled245_20260911172255.png" id="2_7bkq7"]
 
+[sub_resource type="Animation" id="Animation_r7fun"]
+resource_name = "Idle"
+length = 0.43333334
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("HBoxContainer/Untitled24520260911172255:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.33333334),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [true, false]
+}
+
+[sub_resource type="Animation" id="Animation_7bkq7"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("HBoxContainer/Untitled24520260911172255:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_m35ge"]
+_data = {
+&"Idle": SubResource("Animation_r7fun"),
+&"RESET": SubResource("Animation_7bkq7")
+}
+
 [node name="Control" type="Control" unique_id=621261581]
 layout_mode = 3
 anchors_preset = 15
@@ -17,9 +55,15 @@ offset_right = 40.0
 offset_bottom = 40.0
 
 [node name="Untitled24520260911172246" type="Sprite2D" parent="HBoxContainer" unique_id=417510888]
-position = Vector2(-3, 23)
+position = Vector2(588.92, 270.91998)
+scale = Vector2(0.08, 0.08)
 texture = ExtResource("1_r7fun")
 
 [node name="Untitled24520260911172255" type="Sprite2D" parent="HBoxContainer" unique_id=399147249]
-position = Vector2(-8, 21)
+position = Vector2(587.92, 269.91998)
+scale = Vector2(0.08, 0.08)
 texture = ExtResource("2_7bkq7")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=40828914]
+libraries/ = SubResource("AnimationLibrary_m35ge")
+autoplay = &"Idle"

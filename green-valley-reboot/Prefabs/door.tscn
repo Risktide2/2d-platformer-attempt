@@ -96,10 +96,10 @@ script = ExtResource("1_bp8im")
 [node name="Door" parent="." unique_id=687196778 instance=ExtResource("1_uqoeb")]
 transform = Transform3D(0.18, 0, 0, 0, 0.18, 0, 0, 0, 0.18, 0, 0, 0)
 
-[node name="Cube_001" parent="Door" index="1" unique_id=2032311651]
+[node name="Cube_001" parent="Door" index="1" unique_id=622027864]
 transform = Transform3D(1, 0, 0, 0, 28.247543, 0, 0, 0, 20.11233, 0, 0, -17.669996)
 
-[node name="Cube_002" parent="Door" index="2" unique_id=2780328]
+[node name="Cube_002" parent="Door" index="2" unique_id=955295568]
 transform = Transform3D(1, 0, 0, 0, -28.247543, 5.4045386e-06, 0, -7.5906146e-06, -20.11233, 0, 0, 0)
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1386981247]

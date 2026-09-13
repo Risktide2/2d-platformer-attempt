@@ -4,6 +4,7 @@ extends Interactible
 
 
 
-
 func _on_interacted(body: Variant) -> void:
-	$AudioStreamPlayer3D.play()
+	if GameState.get_value("Key") > 0:
+		$AudioStreamPlayer3D.play()
+	

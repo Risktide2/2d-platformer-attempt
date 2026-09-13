@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://to0kqpjl44xc"]
+
+[ext_resource type="Script" uid="uid://cyifjj0t3jul4" path="res://component.gd" id="1_x2jga"]
+[ext_resource type="PackedScene" uid="uid://oni8tenvyjod" path="res://models/Component.glb" id="2_mgq5d"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_pqt4o"]
+size = Vector3(0.535, 0.275, 0.35)
+
+[node name="RigidBody3D" type="RigidBody3D" unique_id=300841588]
+script = ExtResource("1_x2jga")
+
+[node name="Component" parent="." unique_id=1464508726 instance=ExtResource("2_mgq5d")]
+transform = Transform3D(-4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 0, 0, 1, 0, 0, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=78537255]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.04412633, 0)
+shape = SubResource("BoxShape3D_pqt4o")
+
+[connection signal="interacted" from="." to="." method="_on_interacted"]

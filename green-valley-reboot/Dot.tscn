@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://dql6owf01xgta"]
+
+[ext_resource type="PackedScene" uid="uid://cigsjbt2chdq" path="res://models/Dot.glb" id="1_3v1ek"]
+[ext_resource type="Script" uid="uid://ct676lyuj7vxq" path="res://Dot.gd" id="1_nigj7"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_pqt4o"]
+size = Vector3(0.5097656, 0.30639648, 0.62249756)
+
+[node name="RigidBody3D" type="RigidBody3D" unique_id=2109962306]
+script = ExtResource("1_nigj7")
+prompt_message = "Pickup"
+
+[node name="Dot" parent="." unique_id=1226169869 instance=ExtResource("1_3v1ek")]
+transform = Transform3D(-3.715468e-09, -0.085, 0, 0.085, -3.715468e-09, 0, 0, 0, 0.085, 0, 0, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1048036425]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.005859375, 0.119506836, -0.0775764)
+shape = SubResource("BoxShape3D_pqt4o")
+
+[connection signal="interacted" from="." to="." method="_on_interacted"]
