@@ -10,8 +10,10 @@
 [ext_resource type="PackedScene" uid="uid://cf74da057dihj" path="res://Prefabs/door.tscn" id="11_8i65c"]
 [ext_resource type="PackedScene" uid="uid://dql6owf01xgta" path="res://Dot.tscn" id="12_m35rq"]
 [ext_resource type="PackedScene" uid="uid://cn4ns8ecn5gp5" path="res://models/Tutorial map.tscn" id="13_5gw1s"]
+[ext_resource type="AudioStream" uid="uid://b4i3sx57dp4dt" path="res://sounds/sonican-lo-fi-music-loop-sentimental-jazzy-love-473154.mp3" id="13_brn58"]
 [ext_resource type="PackedScene" uid="uid://to0kqpjl44xc" path="res://Component.tscn" id="13_sgy12"]
 [ext_resource type="PackedScene" uid="uid://d01rim830qkn7" path="res://Prefabs/crate.tscn" id="14_5gw1s"]
+[ext_resource type="PackedScene" uid="uid://cfw7g646er7b0" path="res://materials/bar_light.tscn" id="14_brn58"]
 
 [sub_resource type="Environment" id="Environment_vv0ms"]
 ambient_light_color = Color(1, 1, 1, 1)
@@ -56,32 +58,32 @@ transform = Transform3D(-0.79827595, 0, -0.05249281, 0, 0.8, 0, 0.05249281, 0, -
 transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0.46930027, 0)
 visible = false
 
-[node name="Cube" parent="tutorial space" index="0" unique_id=1158432296]
+[node name="Cube" parent="tutorial space" index="0" unique_id=1628082699]
 surface_material_override/0 = SubResource("StandardMaterial3D_x7a1n")
 
-[node name="Cylinder" parent="tutorial space" index="1" unique_id=1193736857]
+[node name="Cylinder" parent="tutorial space" index="1" unique_id=874535283]
 visible = false
 surface_material_override/0 = SubResource("StandardMaterial3D_x7a1n")
 
-[node name="Cylinder_001" parent="tutorial space" index="2" unique_id=2053159921]
+[node name="Cylinder_001" parent="tutorial space" index="2" unique_id=1437668470]
 surface_material_override/0 = SubResource("StandardMaterial3D_x7a1n")
 
-[node name="Cylinder_002" parent="tutorial space" index="3" unique_id=2124102099]
+[node name="Cylinder_002" parent="tutorial space" index="3" unique_id=239776210]
 surface_material_override/0 = SubResource("StandardMaterial3D_x7a1n")
 
-[node name="Cylinder_003" parent="tutorial space" index="4" unique_id=1241779135]
+[node name="Cylinder_003" parent="tutorial space" index="4" unique_id=218708062]
 surface_material_override/0 = SubResource("StandardMaterial3D_x7a1n")
 
-[node name="Cylinder_004" parent="tutorial space" index="5" unique_id=1109005197]
+[node name="Cylinder_004" parent="tutorial space" index="5" unique_id=7064545]
 surface_material_override/0 = SubResource("StandardMaterial3D_x7a1n")
 
-[node name="Cylinder_005" parent="tutorial space" index="6" unique_id=96204860]
+[node name="Cylinder_005" parent="tutorial space" index="6" unique_id=2113514023]
 surface_material_override/0 = SubResource("StandardMaterial3D_x7a1n")
 
-[node name="Cylinder_006" parent="tutorial space" index="7" unique_id=1637352823]
+[node name="Cylinder_006" parent="tutorial space" index="7" unique_id=1601846840]
 surface_material_override/0 = SubResource("StandardMaterial3D_x7a1n")
 
-[node name="Cylinder_007" parent="tutorial space" index="8" unique_id=213222027]
+[node name="Cylinder_007" parent="tutorial space" index="8" unique_id=1346511641]
 surface_material_override/0 = SubResource("StandardMaterial3D_x7a1n")
 
 [node name="Tutorial" type="StaticBody3D" parent="." unique_id=1946282927]
@@ -98,27 +100,22 @@ transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -1.2
 mesh = ExtResource("4_hlpnd")
 surface_material_override/0 = SubResource("StandardMaterial3D_jldhp")
 
-[node name="Lock3" type="MeshInstance3D" parent="." unique_id=1977495993]
-transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 11.605589, 1.6001209, 14.594742)
-mesh = ExtResource("4_hlpnd")
-surface_material_override/0 = SubResource("StandardMaterial3D_jldhp")
-
 [node name="light" parent="." unique_id=1317416311 instance=ExtResource("7_x7a1n")]
 transform = Transform3D(-0.07000001, -9.313226e-10, -3.7252903e-09, 1.8626451e-09, 0.07000001, 0, 6.9849193e-09, 1.8626451e-09, -0.07, 11.605588, 2.601049, 13.806788)
 
-[node name="Cube" parent="light" index="0" unique_id=2053416730]
+[node name="Cube" parent="light" index="0" unique_id=912163545]
 surface_material_override/0 = SubResource("StandardMaterial3D_ube07")
 
-[node name="Cylinder" parent="light" index="1" unique_id=267317767]
+[node name="Cylinder" parent="light" index="1" unique_id=650939252]
 surface_material_override/0 = SubResource("StandardMaterial3D_sp7m3")
 
 [node name="light7" parent="light" unique_id=1803894598 instance=ExtResource("7_x7a1n")]
 transform = Transform3D(2.9999995, -1.1974144e-07, 2.9333205e-07, -7.105428e-15, 2.9999995, 7.9827615e-08, -1.5363375e-07, 1.4210855e-14, 2.9999998, 167.51122, 31.531956, 40.635376)
 
-[node name="Cube" parent="light/light7" index="0" unique_id=2053416730]
+[node name="Cube" parent="light/light7" index="0" unique_id=912163545]
 surface_material_override/0 = SubResource("StandardMaterial3D_ube07")
 
-[node name="Cylinder" parent="light/light7" index="1" unique_id=267317767]
+[node name="Cylinder" parent="light/light7" index="1" unique_id=650939252]
 surface_material_override/0 = SubResource("StandardMaterial3D_sp7m3")
 
 [node name="SpotLight3D" type="SpotLight3D" parent="light/light7" unique_id=55747153]
@@ -128,10 +125,10 @@ spot_angle_attenuation = 0.4999997
 [node name="light2" parent="light" unique_id=1363492232 instance=ExtResource("7_x7a1n")]
 transform = Transform3D(0.99999994, -3.6025624e-16, 0, -1.776357e-15, 0.99999994, 0, -7.1054274e-15, 3.5527137e-15, 0.99999994, 31.237839, 0, 0)
 
-[node name="Cube" parent="light/light2" index="0" unique_id=2053416730]
+[node name="Cube" parent="light/light2" index="0" unique_id=912163545]
 surface_material_override/0 = SubResource("StandardMaterial3D_ube07")
 
-[node name="Cylinder" parent="light/light2" index="1" unique_id=267317767]
+[node name="Cylinder" parent="light/light2" index="1" unique_id=650939252]
 surface_material_override/0 = SubResource("StandardMaterial3D_sp7m3")
 
 [node name="SpotLight3D" type="SpotLight3D" parent="light/light2" unique_id=1000508871]
@@ -141,10 +138,10 @@ spot_angle_attenuation = 0.4999997
 [node name="light3" parent="light" unique_id=961695415 instance=ExtResource("7_x7a1n")]
 transform = Transform3D(0.99999994, -3.6025624e-16, 0, -1.776357e-15, 0.99999994, 0, -7.1054274e-15, 3.5527137e-15, 0.99999994, 66.39921, 0, 0)
 
-[node name="Cube" parent="light/light3" index="0" unique_id=2053416730]
+[node name="Cube" parent="light/light3" index="0" unique_id=912163545]
 surface_material_override/0 = SubResource("StandardMaterial3D_ube07")
 
-[node name="Cylinder" parent="light/light3" index="1" unique_id=267317767]
+[node name="Cylinder" parent="light/light3" index="1" unique_id=650939252]
 surface_material_override/0 = SubResource("StandardMaterial3D_sp7m3")
 
 [node name="SpotLight3D" type="SpotLight3D" parent="light/light3" unique_id=434343532]
@@ -154,10 +151,10 @@ spot_angle_attenuation = 0.4999997
 [node name="light4" parent="light" unique_id=1384357856 instance=ExtResource("7_x7a1n")]
 transform = Transform3D(0.99999994, -3.6025624e-16, 0, -1.776357e-15, 0.99999994, 0, -7.1054274e-15, 3.5527137e-15, 0.99999994, 98.41424, -3.8146973e-06, 1.5258789e-05)
 
-[node name="Cube" parent="light/light4" index="0" unique_id=2053416730]
+[node name="Cube" parent="light/light4" index="0" unique_id=912163545]
 surface_material_override/0 = SubResource("StandardMaterial3D_ube07")
 
-[node name="Cylinder" parent="light/light4" index="1" unique_id=267317767]
+[node name="Cylinder" parent="light/light4" index="1" unique_id=650939252]
 surface_material_override/0 = SubResource("StandardMaterial3D_sp7m3")
 
 [node name="SpotLight3D" type="SpotLight3D" parent="light/light4" unique_id=333183245]
@@ -167,10 +164,10 @@ spot_angle_attenuation = 0.4999997
 [node name="light5" parent="light" unique_id=509276395 instance=ExtResource("7_x7a1n")]
 transform = Transform3D(0.99999994, -3.6025624e-16, 0, -1.776357e-15, 0.99999994, 0, -7.1054274e-15, 3.5527137e-15, 0.99999994, 134.96503, -3.8146973e-06, 1.5258789e-05)
 
-[node name="Cube" parent="light/light5" index="0" unique_id=2053416730]
+[node name="Cube" parent="light/light5" index="0" unique_id=912163545]
 surface_material_override/0 = SubResource("StandardMaterial3D_ube07")
 
-[node name="Cylinder" parent="light/light5" index="1" unique_id=267317767]
+[node name="Cylinder" parent="light/light5" index="1" unique_id=650939252]
 surface_material_override/0 = SubResource("StandardMaterial3D_sp7m3")
 
 [node name="SpotLight3D" type="SpotLight3D" parent="light/light5" unique_id=1139816104]
@@ -180,10 +177,10 @@ spot_angle_attenuation = 0.4999997
 [node name="light6" parent="light" unique_id=1571553266 instance=ExtResource("7_x7a1n")]
 transform = Transform3D(0.99999994, -3.6025624e-16, 0, -1.776357e-15, 0.99999994, 0, -7.1054274e-15, 3.5527137e-15, 0.99999994, 167.51122, -3.8146973e-06, 1.5258789e-05)
 
-[node name="Cube" parent="light/light6" index="0" unique_id=2053416730]
+[node name="Cube" parent="light/light6" index="0" unique_id=912163545]
 surface_material_override/0 = SubResource("StandardMaterial3D_ube07")
 
-[node name="Cylinder" parent="light/light6" index="1" unique_id=267317767]
+[node name="Cylinder" parent="light/light6" index="1" unique_id=650939252]
 surface_material_override/0 = SubResource("StandardMaterial3D_sp7m3")
 
 [node name="SpotLight3D" type="SpotLight3D" parent="light/light6" unique_id=906240144]
@@ -193,10 +190,10 @@ spot_angle_attenuation = 0.4999997
 [node name="light8" parent="light" unique_id=2068603563 instance=ExtResource("7_x7a1n")]
 transform = Transform3D(2.9999995, -1.1974144e-07, 2.9333205e-07, -7.105428e-15, 2.9999995, 7.9827615e-08, -1.5363375e-07, 1.4210855e-14, 2.9999998, 167.51122, 37.43221, 104.44409)
 
-[node name="Cube" parent="light/light8" index="0" unique_id=2053416730]
+[node name="Cube" parent="light/light8" index="0" unique_id=912163545]
 surface_material_override/0 = SubResource("StandardMaterial3D_ube07")
 
-[node name="Cylinder" parent="light/light8" index="1" unique_id=267317767]
+[node name="Cylinder" parent="light/light8" index="1" unique_id=650939252]
 surface_material_override/0 = SubResource("StandardMaterial3D_sp7m3")
 
 [node name="SpotLight3D" type="SpotLight3D" parent="light/light8" unique_id=382397105]
@@ -206,10 +203,10 @@ spot_angle_attenuation = 0.4999997
 [node name="light9" parent="light" unique_id=1882675746 instance=ExtResource("7_x7a1n")]
 transform = Transform3D(2.9999995, -1.1974144e-07, 2.9333205e-07, -7.105428e-15, 2.9999995, 7.9827615e-08, -1.5363375e-07, 1.4210855e-14, 2.9999998, 167.51122, 39.227283, 166.98059)
 
-[node name="Cube" parent="light/light9" index="0" unique_id=2053416730]
+[node name="Cube" parent="light/light9" index="0" unique_id=912163545]
 surface_material_override/0 = SubResource("StandardMaterial3D_ube07")
 
-[node name="Cylinder" parent="light/light9" index="1" unique_id=267317767]
+[node name="Cylinder" parent="light/light9" index="1" unique_id=650939252]
 surface_material_override/0 = SubResource("StandardMaterial3D_sp7m3")
 
 [node name="SpotLight3D" type="SpotLight3D" parent="light/light9" unique_id=1420560335]
@@ -219,10 +216,10 @@ spot_angle_attenuation = 0.4999997
 [node name="light10" parent="light" unique_id=570683567 instance=ExtResource("7_x7a1n")]
 transform = Transform3D(2.9999995, -1.1974144e-07, 2.9333205e-07, -7.105428e-15, 2.9999995, 7.9827615e-08, -1.5363375e-07, 1.4210855e-14, 2.9999998, 167.51122, 39.227283, 221.76294)
 
-[node name="Cube" parent="light/light10" index="0" unique_id=2053416730]
+[node name="Cube" parent="light/light10" index="0" unique_id=912163545]
 surface_material_override/0 = SubResource("StandardMaterial3D_ube07")
 
-[node name="Cylinder" parent="light/light10" index="1" unique_id=267317767]
+[node name="Cylinder" parent="light/light10" index="1" unique_id=650939252]
 surface_material_override/0 = SubResource("StandardMaterial3D_sp7m3")
 
 [node name="SpotLight3D" type="SpotLight3D" parent="light/light10" unique_id=441062234]
@@ -279,18 +276,55 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.147624, 1.1505115, 12.14163
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.588181, 1.1591444, 6.033168)
 
 [node name="crate10" parent="." unique_id=2072971444 instance=ExtResource("14_5gw1s")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.434935, 1.1485176, 13.505936)
+transform = Transform3D(0.6, 0, 0, 0, 0.6, 0, 0, 0, 0.6, 3.434935, 1.1485176, 13.214959)
 
 [node name="crate11" parent="." unique_id=45361315 instance=ExtResource("14_5gw1s")]
-transform = Transform3D(0.9254829, 0, -0.3787893, 0, 1, 0, 0.3787893, 0, 0.9254829, 2.8360772, 1.1485169, 14.279477)
+transform = Transform3D(0.5552898, 0, -0.2272736, 0, 0.6, 0, 0.2272736, 0, 0.5552898, 2.8360772, 1.1485169, 13.988501)
 
 [node name="crate12" parent="." unique_id=1778772095 instance=ExtResource("14_5gw1s")]
-transform = Transform3D(0.90247005, 0, 0.43075264, 0, 1, 0, -0.43075264, 0, 0.90247005, 8.321783, 1.1485171, 14.396948)
+transform = Transform3D(0.54148203, 0, 0.25845158, 0, 0.6, 0, -0.25845158, 0, 0.54148203, 8.321783, 1.1485171, 14.105971)
 
 [node name="StaticBody3D" parent="." unique_id=164966762 instance=ExtResource("13_5gw1s")]
 transform = Transform3D(0.14, 0, 0, 0, 0.14, 0, 0, 0, 0.14, 0, 0.6976154, 0.17082477)
 
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="." unique_id=823275745]
+stream = ExtResource("13_brn58")
+volume_db = -22.78
+autoplay = true
+max_distance = 807.2
+
+[node name="door2" parent="." unique_id=1374101347 instance=ExtResource("11_8i65c")]
+transform = Transform3D(-6.993822e-09, 0, 0.16, 0, 0.16, 0, -0.16, 0, -6.993822e-09, -0.053655446, 1.5562803, 12.722073)
+
+[node name="Keypad2" parent="." unique_id=509337419 instance=ExtResource("10_dlght")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -1.393725, 1.3178262, 12.679392)
+
+[node name="door3" parent="." unique_id=219469356 instance=ExtResource("11_8i65c")]
+transform = Transform3D(0.27, 0, 0, 0, 0.27, 0, 0, 0, 0.27, 11.8498335, 1.5538532, 13.727649)
+
+[node name="Keypad3" parent="." unique_id=2075076423 instance=ExtResource("10_dlght")]
+transform = Transform3D(-1, 7.642742e-15, 8.742278e-08, 0, -1, 8.742278e-08, 8.742278e-08, 8.742278e-08, 1, 10.651417, 1.5530877, 12.894674)
+
+[node name="StaticBody3D2" parent="." unique_id=1975350014 instance=ExtResource("14_brn58")]
+transform = Transform3D(0.97771907, -0.20991765, 0, 0.20991765, 0.97771907, 0, 0, 0, 1, 22.266882, 7.6503625, 13.53441)
+
+[node name="StaticBody3D4" parent="." unique_id=329698163 instance=ExtResource("14_brn58")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15.404784, 6.5760603, 12.280648)
+
+[node name="StaticBody3D5" parent="." unique_id=506207331 instance=ExtResource("14_brn58")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15.521266, 6.5709615, 14.46126)
+
+[node name="door4" parent="." unique_id=1781283173 instance=ExtResource("11_8i65c")]
+transform = Transform3D(0.16, 0, 0, 0, 0.16, 0, 0, 0, 0.16, 26.433718, 3.574044, 13.573357)
+
+[node name="Keypad4" parent="." unique_id=2011627338 instance=ExtResource("10_dlght")]
+transform = Transform3D(1.1924881e-08, 0, -1, 0, 1, 0, 1, 0, 1.1924881e-08, 26.411528, 3.675146, 15.324954)
+prompt_message = "activate to finish tutorial"
+
 [connection signal="interacted" from="Keypad" to="door" method="toggle"]
+[connection signal="interacted" from="Keypad2" to="door2" method="toggle"]
+[connection signal="interacted" from="Keypad3" to="door3" method="toggle"]
+[connection signal="interacted" from="Keypad4" to="door4" method="toggle"]
 
 [editable path="tutorial space"]
 [editable path="light"]

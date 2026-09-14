@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://bdlrgnagffiik" path="res://MainMenu.gd" id="1_sravh"]
 [ext_resource type="Texture2D" uid="uid://hdm27bdjcp2q" path="res://textures/Untitled244_20260911141655.png" id="2_gck0r"]
+[ext_resource type="AudioStream" uid="uid://b4i3sx57dp4dt" path="res://sounds/sonican-lo-fi-music-loop-sentimental-jazzy-love-473154.mp3" id="3_b7htb"]
 
 [node name="Control" type="Control" unique_id=913124123]
 layout_mode = 3
@@ -123,6 +124,12 @@ offset_top = 3.0
 offset_right = 34.0
 offset_bottom = 34.0
 text = "X"
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=1319073333]
+stream = ExtResource("3_b7htb")
+volume_db = -18.548
+pitch_scale = 1.6
+autoplay = true
 
 [connection signal="pressed" from="CenterContainer/VBoxContainer/Settings" to="Settings panel" method="show"]
 [connection signal="pressed" from="CenterContainer/VBoxContainer/Settings" to="Settings panel" method="set_mouse_filter" binds= [0]]

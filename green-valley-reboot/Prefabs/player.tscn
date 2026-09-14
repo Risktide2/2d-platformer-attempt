@@ -8,19 +8,109 @@
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_onrkg"]
 
+[sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_pqt4o"]
+random_pitch = 1.0717734
+streams_count = 3
+
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_hqtel"]
+
+[sub_resource type="Animation" id="Animation_knrd4"]
+length = 0.001
+tracks/0/type = "position_3d"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("CameraOrigin/Camera3D")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = PackedFloat32Array(0, 1, 0, 0.13052908, -0.10305744)
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("CollisionShape3D:disabled")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("CollisionShape3D2:disabled")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+
+[sub_resource type="Animation" id="Animation_hck1p"]
+resource_name = "StandingToCrouch"
+length = 0.2
+tracks/0/type = "position_3d"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("CameraOrigin/Camera3D")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = PackedFloat32Array(0, 1, 0, 0.13052908, -0.10305744, 0.2, 1, 0, -0.3, -0.103)
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("CollisionShape3D:shape")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(),
+"transitions": PackedFloat32Array(),
+"update": 1,
+"values": []
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("CollisionShape3D:disabled")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(-0.03333333, 0.16666667),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, true]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("CollisionShape3D2:disabled")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(-0.033333335, 0.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_juxdh"]
+_data = {
+&"RESET": SubResource("Animation_knrd4"),
+&"StandingToCrouch": SubResource("Animation_hck1p")
+}
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_pqt4o"]
+height = 1.3154297
 
 [node name="Player" type="CharacterBody3D" unique_id=770292430]
 transform = Transform3D(0.8, 0, 0, 0, 0.8, 0, 0, 0, 0.8, 0, 0, 0)
 platform_wall_layers = 255
 script = ExtResource("1_i3pqv")
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=563820994]
-transform = Transform3D(0.8, 0, 0, 0, 0.8, 0, 0, 0, 0.8, 0, 0, 0)
-shape = SubResource("CapsuleShape3D_onrkg")
-
 [node name="Tangle" type="MeshInstance3D" parent="." unique_id=757043668]
-transform = Transform3D(-0.8000001, 0, -6.9938224e-08, 0, 0.8000001, 0, 6.9938224e-08, 0, -0.8000001, 0, -0.76900065, 0)
+transform = Transform3D(-0.79999995, 0, -6.993822e-08, 0, 0.79999995, 0, 6.993822e-08, 0, -0.79999995, 0, -0.7690006, 0)
 visible = false
 mesh = ExtResource("1_4flbx")
 surface_material_override/0 = ExtResource("2_onrkg")
@@ -42,11 +132,19 @@ surface_material_override/15 = ExtResource("2_onrkg")
 surface_material_override/16 = ExtResource("2_onrkg")
 surface_material_override/17 = ExtResource("2_onrkg")
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=1544925546]
-mesh = SubResource("CapsuleMesh_hqtel")
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=563820994]
+transform = Transform3D(0.8000001, 0, 0, 0, 0.8000001, 0, 0, 0, 0.8000001, 0, 0, 0)
+shape = SubResource("CapsuleShape3D_onrkg")
+
+[node name="UI" parent="." unique_id=1758347381 instance=ExtResource("5_hck1p")]
+
+[node name="Footstepaudio3d" type="AudioStreamPlayer3D" parent="." unique_id=564715682]
+unique_name_in_owner = true
+transform = Transform3D(1.25, 0, 0, 0, 1.25, 0, 0, 0, 1.25, 0, -0.76572543, 0)
+stream = SubResource("AudioStreamRandomizer_pqt4o")
 
 [node name="CameraOrigin" type="Node3D" parent="." unique_id=1704211897]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.4379891, 0)
+transform = Transform3D(0.99999994, 0, 0, 0, 0.99999994, 0, 0, 0, 0.99999994, 0, 0.437989, 0)
 
 [node name="SpringArm3D" type="SpringArm3D" parent="CameraOrigin" unique_id=2134193598]
 spring_length = 2.0
@@ -58,4 +156,14 @@ margin = 0.5
 transform = Transform3D(1.25, 0, 0, 0, 1.25, 0, 0, 0, 1.25, 0, 0.13052908, -0.10305744)
 fov = 57.674572
 
-[node name="UI" parent="." unique_id=1758347381 instance=ExtResource("5_hck1p")]
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=1544925546]
+transform = Transform3D(0.99999994, 0, 0, 0, 0.99999994, 0, 0, 0, 0.99999994, 0, 0, 0)
+visible = false
+mesh = SubResource("CapsuleMesh_hqtel")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=2140458330]
+libraries/ = SubResource("AnimationLibrary_juxdh")
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="." unique_id=1709741191]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.1530753, 0)
+shape = SubResource("CapsuleShape3D_pqt4o")

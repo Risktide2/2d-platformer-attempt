@@ -1,0 +1,24 @@
+[gd_scene format=3 uid="uid://cfw7g646er7b0"]
+
+[ext_resource type="PackedScene" uid="uid://1vknn86axl8e" path="res://models/light.glb" id="1_5obrs"]
+[ext_resource type="Material" uid="uid://diwo0ev153eve" path="res://materials/light.tres" id="2_ice00"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_pqt4o"]
+albedo_color = Color(0.4351923, 0.43519226, 0.43519226, 1)
+
+[node name="StaticBody3D" type="StaticBody3D" unique_id=1975350014]
+
+[node name="light" parent="." unique_id=1317416311 instance=ExtResource("1_5obrs")]
+transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, 0, 0, 0)
+
+[node name="Cube" parent="light" index="0" unique_id=912163545]
+surface_material_override/0 = SubResource("StandardMaterial3D_pqt4o")
+
+[node name="Cylinder" parent="light" index="1" unique_id=650939252]
+surface_material_override/0 = ExtResource("2_ice00")
+
+[node name="SpotLight3D" type="SpotLight3D" parent="light" unique_id=1785058376]
+transform = Transform3D(5, 0, 0, 0, 5.9624405e-08, 5, 0, -5, 5.9624405e-08, 0, -1.4703906, 0)
+spot_range = 13.040247
+
+[editable path="light"]
